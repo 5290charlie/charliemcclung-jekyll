@@ -2,33 +2,43 @@
 layout: default
 ---
 
-<div class="home">
-  {%- if page.title -%}
-    <h1 class="page-heading">{{ page.title }}</h1>
-  {%- endif -%}
+{%- include header.html -%}
 
-  {{ content }}
+{%- for section in site.sections -%}
+  {{ section.content }}
+{%- endfor -%}
 
-  {%- if site.posts.size > 0 -%}
-    <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
-    <ul class="post-list">
-      {%- for post in site.posts -%}
-      <li>
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
-        <h3>
-          <a class="post-link" href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}
-          </a>
-        </h3>
-        {%- if site.show_excerpts -%}
-          {{ post.excerpt }}
-        {%- endif -%}
-      </li>
-      {%- endfor -%}
-    </ul>
+<!-- lazy load css -->
+<script type="text/javascript">
+  var css = [
+      // 'bootstrap.min.css',
+      'font-awesome.min.css',
+      'magnific-popup.css',
+      'main.min.css',
+      'colors/blue.css',
+      'style.css'
+  ];
 
-    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
-  {%- endif -%}
+  for (i in css) {
+      var head  = document.getElementsByTagName('head')[0];
+      var link  = document.createElement('link');
+      link.rel  = 'stylesheet';
+      link.type = 'text/css';
+      link.href = 'css/' + css[i];
+      link.media = 'all';
+      head.appendChild(link);
+  }
+</script>
 
-</div>
+<script src="js/jquery-1.10.2.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.scrollTo.js"></script>
+<script src="js/jquery.nav.min.js"></script>
+<script src="js/jquery.sticky.js"></script>
+<script src="js/jquery.easypiechart.min.js"></script>
+<script src="js/jquery.vegas.min.js"></script>
+<script src="js/jquery.isotope.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/waypoints.min.js"></script>
+<script src="js/main.js"></script>

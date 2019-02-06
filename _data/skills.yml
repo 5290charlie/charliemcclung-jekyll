@@ -1,0 +1,35 @@
+- name: Docker
+  percent: 95
+
+- name: AWS
+  percent: 85
+
+- name: TravisCI
+  percent: 90
+
+- name: Jenkins
+  percent: 80
+
+- name: Vagrant
+  percent: 90
+
+- name: Ansible
+  percent: 90
+
+- name: Unix
+  percent: 95
+
+- name: Bash
+  percent: 95
+
+- name: JavaScript
+  percent: 95
+
+- name: PHP
+  percent: 90
+
+- name: Ruby
+  percent: 95
+
+- name: Python
+  percent: 80
