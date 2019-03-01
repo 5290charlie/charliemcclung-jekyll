@@ -2,28 +2,24 @@
 heading: Contact
 subheading: I would love to hear from you!
 contact_phone: 303.907.0810
-contact_email: charlie@cmr1.com
+contact_email: charlie@bowtie.co
+
 ---
-
 <section id="page-contact" class="page-contact">
-  <div class="container">
-      <header class="section-header">
-          <h2 class="section-title"><span>{{ page.heading }}</span></h2>
-
-          <div class="spacer"></div>
-          <p class="section-subtitle">{{ page.subheading }}</p>
-      </header>
-      <div class="row">
-          <div class="col-sm-5 contact-info">
-              <h3>Contact Info</h3>
-              <p><i class="fa fa-phone"></i> {{ page.contact_phone }}</p>
-
-              <p><i class="fa fa-envelope-o"></i> {{ page.contact_email }}</p>
-          </div>
-
-          <div id="contact-form-container" class="col-sm-7">
-              <h3 class="heading">Contact form is currently disabled.</h3>
-              <!-- <h3 class="heading">Get in Touch</h3>
+<div class="container"><header class="section-header">
+<h2 class="section-title">{{ page.heading }}</h2>
+<div class="spacer">&nbsp;</div>
+<p class="section-subtitle">{{ page.subheading }}</p>
+</header>
+<div class="row">
+<div class="col-sm-5 contact-info">
+<h3>Contact Info</h3>
+<p>{{ page.contact_phone }}</p>
+<p>{{ page.contact_email }}</p>
+</div>
+<div id="contact-form-container" class="col-sm-7">
+<h3 class="heading">Contact form is currently disabled.</h3>
+<!-- <h3 class="heading">Get in Touch</h3>
 
               <form class="form-horizontal" id="contact-form" method="post" action="contact.php">
                   <div class="control-group">
@@ -52,12 +48,7 @@ contact_email: charlie@cmr1.com
                   <div class="form-actions">
                       <button type="submit" class="btn btn-default btn-lg btn-block">Submit Message</button>
                   </div>
-              </form> -->
-              <!-- End contact-form -->
-          </div>
-
-      </div>
-      <!-- End row -->
-
-  </div>
+              </form> --> <!-- End contact-form --></div>
+</div>
+<!-- End row --></div>
 </section>
